@@ -154,6 +154,47 @@ $slider-bg-color: lighten($primary-background-color, 33%);
   background: rgba($slider-bg-color, 0.75);
 }
 
+.video-js > .vjs-peertube-comment-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-js > .vjs-peertube-comment-container > * {
+  margin: 0 auto;
+  overflow: hidden;
+  width: var(--width);
+  height: 100%;
+}
+
+.video-js > .vjs-peertube-comment-container > * > .vjs-peertube-comment-auto,
+.video-js > .vjs-peertube-comment-container > * > .vjs-peertube-comment-center {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.video-js > .vjs-peertube-comment-container > * > .vjs-peertube-comment-auto {
+  animation: vjs-peertube-comment-auto 9s linear;
+  max-width: var(--width);
+  overflow: hidden;
+
+  @keyframes vjs-peertube-comment-auto {
+    from {
+      left: calc((100% + var(--width)) / 2);
+    }
+
+    to {
+      left: calc((100% - var(--width) * 3) / 2);
+    }
+  }
+}
+
+.video-js > .vjs-peertube-comment-container > * > .vjs-peertube-comment-center {
+  text-align: center;
+  width: var(--width);
+}
+
 //Skin Style Starts
 .vjs-sublime-skin .vjs-poster {
     outline: none; /* Remove Blue Outline on Click*/

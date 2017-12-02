@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs/Subscription'
 import videojs from 'video.js'
 import { UserVideoRateType, VideoRateType } from '../../../../../shared'
 import '../../../assets/player/peertube-videojs-plugin'
+import '../../../assets/player/peertube-comment-videojs-plugin'
 import { AuthService, ConfirmService } from '../../core'
 import { VideoBlacklistService } from '../../shared'
 import { MarkdownService, VideoDetails, VideoService } from '../shared'
@@ -292,6 +293,73 @@ export class VideoWatchComponent implements OnInit, OnDestroy {
               playerElement: this.playerElement,
               autoplay: true,
               peerTubeLink: false
+            },
+            peertubeComment: {
+              comments: [
+                {
+                  color: '#f00',
+                  position: 'top',
+                  size: 0.1,
+                  text: 'Top',
+                  time: 0
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.1
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.2
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.3
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.4
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.5
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.6
+                }, {
+                  color: '#000',
+                  position: 'auto',
+                  size: 0.1,
+                  text: 'meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow',
+                  time: 0.7
+                }, {
+                  color: '#f00',
+                  position: 'bottom',
+                  size: 0.1,
+                  text: 'PEERTUBE AMAZING',
+                  time: 0.5
+                }
+              ],
+              width: '--width',
+              height: '--height'
             }
           }
         }

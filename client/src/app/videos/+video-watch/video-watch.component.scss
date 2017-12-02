@@ -12,10 +12,11 @@
 }
 
 .embed-responsive {
-  height: 500px;
+  --height: 500px;
+  height: var(--height);
 
   @media screen and (max-width: 600px) {
-    height: 300px;
+    --height: 300px;
   }
 }
 
